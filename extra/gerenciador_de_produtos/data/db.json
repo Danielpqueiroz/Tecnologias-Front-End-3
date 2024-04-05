@@ -1,0 +1,63 @@
+{
+    "suppliers": [
+        {
+            "id": "1",
+            "name": "Urbano LTDA",
+            "cnpj": "67.789.123/0002-67",
+            "email": "sac@urbano.com.br"
+        },
+        {
+            "id": "2",
+            "name": "Urbano 3 LTDA",
+            "cnpj": "67.789.123/0002-67",
+            "email": "sac@urbano.com.br" 
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "TV",
+            "price": 2000.00,
+            "supplierId": 1
+
+
+        },
+        {
+            "id": 2,
+            "name": "MacBook",
+            "price": 50000.00,
+            "supplierId": "1"
+
+
+        }
+    ],
+    "costumers": [
+        {
+          "id": 1,
+          "name": "João Silva 2",
+          "cpf": "123.123.123-12",
+          "email": "joao@gmail.com",
+          "zipcode": "55555-555",
+          "street": "Rua de Teste",
+          "number": "100",
+          "neighborhood": "Mangabeira",
+          "city": "João Pessoa",
+          "state": "Paraíba",
+          "country": "Brasil"
+        },
+        {
+          "name": "Zezinho",
+          "cpf": "123123",
+          "email": "zezin@gmail.com",
+          "zipcode": "58079000",
+          "street": "Rua Josefa Miranda Freire",
+          "number": "105",
+          "neighborhood": "Jardim Oceania",
+          "city": "João Pessoa",
+          "state": "Paraíba",
+          "country": "Brasil",
+          "id": 2
+        }
+      ]
+    
+}
