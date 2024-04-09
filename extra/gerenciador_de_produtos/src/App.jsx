@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import SupplierList from './pages/Supplier/SupplierList';
 import './App.css'
 import SupplierForm from './pages/Supplier/SupplierForm';
-//import ProductList from './pages/Product/ProductList';
-//import ProductForm from './pages/Product/ProductForm';
-//import CostumerForm from './pages/Costumer/CostumerForm';
+import ProductList from './pages/Product/ProductList';
+import ProductForm from './pages/Product/ProductForm';
+import CostumerForm from './pages/Costumer/CostumerForm';
 
 const App = () => {
   return (

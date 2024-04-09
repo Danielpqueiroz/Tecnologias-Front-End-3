@@ -4,6 +4,7 @@ import Aluno from './components/Aluno'
 import ExCss from './components/ExCss'
 import Sozinho01 from './components/Sozinho01'
 
+
 const App = () => {
 
   const aluno01 = {
