@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import axios from '../../api'
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const SupplierList = () => {
 
