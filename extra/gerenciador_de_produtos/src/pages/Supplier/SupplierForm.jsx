@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import axios from 'axios'
+import axios from '../../api'
 
 const SupplierForm = () => {
 
@@ -13,10 +13,12 @@ const SupplierForm = () => {
        if (id) {
             axios.get(`/suppliers/${id}`)
             .then(response => {
-                setSupplier(responde.data)
+                setSupplier(response.data)
             })
             .catch(error => console.error('Erro ao buscar fornecedor', error))
-       } 
+       }  else {
+            setSupplier({ name: '', cnpj: '', email: ''})
+       }
     }, [id])
 
     function handleChange(event) {
@@ -28,10 +30,10 @@ const SupplierForm = () => {
         const method = id ? 'put' : 'post'
         const url = id ? `/suppliers/${id}` : '/suppliers'
 
-        axios.post('/suppliers', supplier)
+        axios[method](url, supplier)
         .then(() => {
-            alert('Fornevedor adicionado com sucesso!') 
-            navigate("/")       
+            alert(`Fornecedor ${id ? 'atualizado' : 'adicionado'} com sucesso!`) 
+            navigate("/listar-fornecedores")       
         })
         .catch(error => console.error("Ocorreu um erro: ",error))
     }
@@ -39,7 +41,7 @@ const SupplierForm = () => {
 
   return (
     <div className='container mt-5'>
-        <h2>Adicionar Fornecedor</h2>
+        <h2>{id ? 'Editar' : 'Adicionar'} Fornecedor</h2>
         <form onSubmit={handleSubmit}>
             <div className='form-group'>
                 <label htmlFor="name">Nome do Fornecedor:</label>
@@ -53,7 +55,7 @@ const SupplierForm = () => {
                 <label htmlFor="email">Email do Fornecedor:</label>
                 <input type="text" className='form-control' id='email' name='email' value={supplier.email} onChange={handleChange} required />
             </div>
-            <button type='submit' className='btn btn-success'>Adicionar</button>
+            <button type='submit' className='btn btn-success'>{id ? 'Atualizar' : 'Adicionar'}</button>
         </form>
 
     </div>

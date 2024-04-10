@@ -18,7 +18,7 @@ const App = () => {
               <Route path="/" element={<SupplierList/>} />
               <Route path="/add-fornecedor" element={<SupplierForm/>} />
               <Route path="/listar-fornecedores" element={<SupplierList/>} />
-              <Route path="/editar-fornecedo/:id" element={<SupplierForm/>} />
+              <Route path="/editar-fornecedor/:id" element={<SupplierForm/>} />
               <Route path="/listar-produtos" element={<ProductList/>} />
               <Route path="/add-produto" element={<ProductForm/>} />
               <Route path="/editar-produto" element={<ProductForm/>} />
