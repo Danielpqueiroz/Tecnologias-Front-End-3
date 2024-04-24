@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React  from 'react'
 import axios from '../../api'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 
 const ProductList = () => {
 
-    const [products, setProducts] = useState ({})
+    const [products, setProducts] = useState ([])
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -50,7 +52,7 @@ const ProductList = () => {
                 <tr key={product.id}>
                   <td>{product.name}</td>
                   <td>{product.price}</td>
-                  <td>{product.supplier.name}</td>
+                  <td>{product.supplier?.name}</td>
                   <td>
                     <button onClick={() => navigate(`/editar-produto/${product.id}`)}className='btn btn-sm btn-warning mr-2' >Editar</button>
                     <button onClick={() => deleteProduct(product.id)} className='btn btn-sm btn-danger'>Excluir</button>

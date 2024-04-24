@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const SupplierList = () => {
 
     const [suppliers, setSuppliers] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         axios.get('/suppliers')
@@ -56,7 +57,7 @@ const SupplierList = () => {
                   <td>{supplier.email}</td>
                   <td>
                     <button onClick={() => navigate(`/editar-fornecedor/${supplier.id}`)}className='btn btn-sm btn-warning mr-2' >Editar</button>
-                    <button onClick={() => deleteProduct(product.id)} className='btn btn-sm btn-danger'>Excluir</button>
+                    <button onClick={() => deleteSupplier(supplier.id)} className='btn btn-sm btn-danger'>Excluir</button>
                   </td>
 
 
