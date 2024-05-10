@@ -1,0 +1,17 @@
+{
+    "noticias": [
+        {
+            "id": 1,
+            "titulo": "Cientistas Descobrem Nova Espécie de Borboleta na Floresta Amazônica",
+            "subtitulo": "A descoberta destaca a riqueza da biodiversidade na maior floresta tropical do mundo.",
+            "texto":"Os pesquisadores ficaram maravilhados com a beleza e singularidade da nova espécie. Além disso, a descoberta ressalta a importância da preservação da Floresta Amazônica, não apenas pela sua diversidade de vida, mas também pelo papel crucial que desempenha na regulação do clima global e na manutenção da saúde do planeta."
+
+        },
+        {
+            "id": 2,
+            "titulo": "Novo Estudo Revela Impacto Positivo da Meditação na Saúde Mental",
+            "subtitulo": "A prática regular de meditação é associada a benefícios significativos para o bem-estar psicológico",
+            "texto": "Um novo estudo conduzido por pesquisadores de renome internacional revelou evidências convincentes do impacto positivo da meditação na saúde mental. Publicado na prestigiada revista científica."
+        }
+    ]
+}
