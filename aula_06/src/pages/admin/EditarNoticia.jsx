@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Button, TextField, Typography, Box } from '@mui/material'
-import { url } from '/api'
+const url = "http://localhost:3000/noticias"
 
 
 
